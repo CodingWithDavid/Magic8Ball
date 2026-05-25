@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic 8 Ball</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app">
+    <h1>Magic 8 Ball</h1>
+    <p class="subtitle">Tap ask or shake your device for an answer.</p>
+
+    <section class="ball-wrap" aria-label="Magic 8 Ball">
+      <div class="ball">
+        <div class="ball-inner">
+          <div class="ball-face ball-front">
+            <div class="ball-highlight"></div>
+            <div class="eight-badge">8</div>
+          </div>
+
+          <div class="ball-face ball-back">
+            <div class="answer-window">
+              <div id="answer" class="answer" aria-live="polite">
+                Ask a question…
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Waiting for your question.</p>
+
+    <div class="controls">
+      <button id="ask-btn" type="button">Ask the 8 Ball</button>
+      <button id="motion-btn" type="button" class="secondary hidden">
+        Enable shake access
+      </button>
+    </div>
+
+    <p id="motion-note" class="motion-note" aria-live="polite">
+      Checking shake support...
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
